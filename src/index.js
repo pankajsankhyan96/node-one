@@ -1,11 +1,11 @@
 var http = require('http')
 var express = require('express')
 var app = express()
-var port = 3008;
+const PORT = process.env.PORT || 3000;
 app.get('/', (req, res) => {
-    res.end("Hello, This is my first node project, running on Port : " + port);
+    res.end("Hello, This is my first node project, running on Port : " + PORT);
 })
 
-app.listen(port, () => {
-    console.log("The server is running on port : " + port)
+app.listen(PORT, () => {
+    console.log("The server is running on port : " + PORT)
 })
